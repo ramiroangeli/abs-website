@@ -92,17 +92,15 @@
     }
 
     .nav-logo-img {
-      height: 36px;
-      width: auto;
-      /* default: on dark hero, make logo sand/light */
-      filter: brightness(0) saturate(100%) invert(93%) sepia(10%) saturate(300%) hue-rotate(10deg) brightness(105%);
-      transition: filter 0.5s ease;
-    }
+  height: 52px;
+  width: auto;
+  mix-blend-mode: screen;
+  transition: filter 0.5s ease;
+}
 
-    nav.scrolled .nav-logo-img {
-      /* on scrolled light nav, show original green color */
-      filter: none;
-    }
+nav.scrolled .nav-logo-img {
+  mix-blend-mode: multiply;
+}
 
     .nav-logo-sub {
       font-size: 0.5rem;
@@ -252,7 +250,13 @@
       align-items: end;
     }
 
-    .hero-left .label { color: rgba(231,223,210,0.6); margin-bottom: 2rem; display: block; }
+    .hero-left .label { 
+      color: rgba(231,223,210,0.85); 
+      margin-bottom: 2rem; 
+      display: block;
+      font-size: 1.40rem;
+      letter-spacing: 0.28em;
+    }
 
     .hero-title {
       font-family: "DM Serif Display", serif;
@@ -283,10 +287,10 @@
     }
 
     .hero-service-item {
-      font-size: 0.72rem;
+      font-size: 0.85rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--sage);
+      color: var(--sand);
       display: flex;
       align-items: center;
       gap: 0.8rem;
@@ -562,6 +566,26 @@
       color: var(--sage);
       margin-top: 0.45rem;
       display: block;
+    }
+    .case-record {
+      margin-top: 1.5rem;
+      padding: 1.4rem 1.5rem;
+      background: rgba(181,106,76,0.12);
+      border: 1px solid rgba(181,106,76,0.4);
+      display: flex;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: var(--sage);
+      line-height: 1.6;
+    }
+
+    .case-record-icon { font-size: 1.4rem; }
+
+    .case-record strong {
+      color: var(--sand);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.4rem;
     }
 
     .case-buyer {
@@ -1059,7 +1083,7 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="/" class="nav-logo-wrap">
-  <img class="nav-logo-img" src="./abs_logo_OK.png" alt="ABS Logo">
+  <img class="nav-logo-img" src="./abs_logo_OK3.png" alt="ABS Logo">
   <span class="nav-logo-sub">Australasian Business Sales</span>
 </a>
   <ul class="nav-links">
@@ -1086,9 +1110,9 @@
       <div class="hero-right fu d2">
         <p class="hero-desc">Advising developers and infrastructure owners on hospitality assets across the Asia-Pacific region.</p>
         <div class="hero-services">
-          <span class="hero-service-item">Hotel Development Advisory</span>
+          <span class="hero-service-item">Resort Sales &amp; Divestment Advice</span>
           <span class="hero-service-item">Brand &amp; Operator Procurement</span>
-          <span class="hero-service-item">Asset Sale &amp; Exit Strategy</span>
+          <span class="hero-service-item">Hotel Development Advisory</span>
         </div>
         <a href="#case" class="btn-terra">View Track Record</a>
         <a href="#contact" class="btn-ghost">Speak with Steve</a>
@@ -1114,12 +1138,12 @@
         <span class="intro-stat-label">Rooms — Australia's largest modular hotel sale</span>
       </div>
       <div class="intro-stat fu d2">
-        <span class="intro-stat-num">5</span>
-        <span class="intro-stat-label">Advisory regions across Asia-Pacific</span>
+        <span class="intro-stat-num">$1b+</span>
+        <span class="intro-stat-label">Of transactions across multiple countries in the Asia-Pacific</span>
       </div>
       <div class="intro-stat fu d3">
         <span class="intro-stat-num">AU</span>
-        <span class="intro-stat-label">Based in Australia — advising regionally</span>
+        <span class="intro-stat-label">Based in Australia - advising regionally</span>
       </div>
     </div>
   </div>
@@ -1187,6 +1211,14 @@
           <span class="case-metric-val">#1</span>
           <span class="case-metric-desc">Record Sale</span>
         </div>
+      </div>
+      <div class="case-record fu d3">
+      <div class="case-record-icon">🏆</div>
+      <div>
+      <strong>Australia's Largest Modular Hotel — A National First</strong><br>
+      At the time of sale, Oaks Elan SOHO Darwin was the largest modular hotel 
+      in Australia and the first modular high-rise hotel ever sold in the country.
+      </div>
       </div>
       <div class="case-buyer fu d4">
         <strong>Acquired by Minor Group Thailand</strong> — facilitated by ABS through full branding, operator alignment and structured exit strategy.
@@ -1302,11 +1334,11 @@
         <h2 class="fu d1">Currently Advising</h2>
       </div>
       <div>
-        <p class="fu d2">ABS is currently advising on hospitality development opportunities across the Asia-Pacific region, including airport hotel developments and modular hospitality assets. If you are a developer, infrastructure owner or investor with a hospitality project seeking commercial advisory, we welcome the conversation.</p>
+        <p class="fu d2">ABS works with repeat and referral clients on a project by project basis — bringing focused, senior-level attention to each engagement across the Asia-Pacific region.</p>
         <div class="current-tags fu d3">
           <span class="tag">Airport Hotel Developments</span>
           <span class="tag">Modular Hospitality Assets</span>
-          <span class="tag">Resort Acquisition Advisory</span>
+          <span class="tag">Resort Sales</span>
           <span class="tag">Asia-Pacific Markets</span>
         </div>
       </div>
