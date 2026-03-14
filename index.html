@@ -1389,10 +1389,10 @@ c
       <div class="fu d2">
         <form class="cform" id="cform">
         <div class="fg-row">
-          <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" /></div>
-          <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" /></div>
+          <div class="fg"><label>First Name (*)</label><input type="text" name="first_name" placeholder="John" required /></div>
+          <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"/></div>
         </div>
-        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="john@company.com" /></div>
+        <div class="fg"><label>Email (*)</label><input type="email" name="email" placeholder="john@company.com" required /></div>
         <div class="fg"><label>Organisation</label><input type="text" name="organisation" placeholder="Your company" /></div>
         <div class="fg">
           <label>Nature of Enquiry</label>
@@ -1405,7 +1405,7 @@ c
             <option>General Enquiry</option>
           </select>
         </div>
-        <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us about your project…"></textarea></div>
+        <div class="fg"><label>Message  (*)</label><textarea name="message" placeholder="Tell us about your project…" required></textarea></div>
         <button class="form-btn" type="submit">Send Enquiry →</button>
         </form>   
         <div class="form-ok" id="formOk">&#10003;&nbsp; Thank you — Steve will be in touch within 24 hours.</div>
