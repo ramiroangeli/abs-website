@@ -92,7 +92,7 @@
     }
 
     .nav-logo-img {
-  height: 52px;
+  height: 72px;
   width: auto;
   mix-blend-mode: screen;
   transition: filter 0.5s ease;
@@ -428,13 +428,19 @@ nav.scrolled .nav-logo-img {
 
     .about-left p strong { color: var(--charcoal); font-weight: 700; }
 
-    .about-photo { position: relative; }
+    .about-photo { 
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
 
     .about-photo-img {
       width: 100%;
       max-width: 350px;
       aspect-ratio: 3/4;
       overflow: hidden;
+      box-shadow: 10px 10px 40px rgba(0,0,0,0.18);
     }
 
     .about-photo-img img {
@@ -500,8 +506,8 @@ nav.scrolled .nav-logo-img {
         Ejemplo: background-image: url("fotos/elan-soho-exterior.jpg");
       */
       background:
-        linear-gradient(to right, transparent 55%, var(--green) 100%),
-        url('./oak_hotel.webp') 20% center/cover no-repeat;
+        linear-gradient(to right, transparent 50%, var(--green) 100%),
+        url('./oak.jpg') 50% center/cover no-repeat;
       min-height: 500px;
     }
 
@@ -543,7 +549,7 @@ nav.scrolled .nav-logo-img {
     .case-metrics {
       margin: 2rem 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1px;
       background: rgba(231,223,210,0.08);
       margin: 2.5rem 0;
@@ -578,7 +584,7 @@ nav.scrolled .nav-logo-img {
       border: 1px solid rgba(181,106,76,0.4);
       display: flex;
       gap: 1rem;
-      font-size: 0.92rem;
+      font-size: 1.1rem;
       color: var(--sage);
       line-height: 1.6;
     }
@@ -589,7 +595,7 @@ nav.scrolled .nav-logo-img {
       color: var(--sand);
       font-weight: 700;
       display: block;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.2rem;
     }
 
     .case-buyer {
@@ -1174,14 +1180,11 @@ nav.scrolled .nav-logo-img {
       </div>
       <div class="about-photo fu d2">
         <div class="about-photo-img">
-          <!--
-            REEMPLAZAR CON FOTO DE STEVE
-            Cuando tengas una foto profesional de Steve, guardala en una carpeta
-            llamada "fotos" dentro de abs-website y cambia el src a:
-            src="fotos/steve-dawson.jpg"
-          -->
           <img src="./steves-image.jpg"  alt="Steve Dawson — Principal Advisor, ABS" />
         </div>
+        <a href="#contact" class="btn-terra" style="display:block; text-align:center; margin-top:1.5rem;">
+        Get In Touch
+        </a>
       </div>
     </div>
   <div class="about-credentials fu d5">
@@ -1212,16 +1215,20 @@ nav.scrolled .nav-logo-img {
       <p class="fu d3">Steve assisted in aligning the project with the <strong style="color:var(--sand)">Oaks brand</strong> and facilitating the eventual acquisition of the completed hotel by <strong style="color:var(--sand)">Minor Group Thailand</strong>. The project demonstrated the commercial viability of modular hospitality development in Australia and established a successful precedent for future projects.</p>
       <div class="case-metrics fu d3">
         <div class="case-metric">
-          <span class="case-metric-val">434</span>
+          <span class="case-metric-val">301</span>
           <span class="case-metric-desc">Total Rooms</span>
         </div>
         <div class="case-metric">
-          <span class="case-metric-val">30</span>
+          <span class="case-metric-val">29</span>
           <span class="case-metric-desc">Storeys</span>
         </div>
         <div class="case-metric">
           <span class="case-metric-val">#1</span>
           <span class="case-metric-desc">Record Sale</span>
+        </div>
+        <div class="case-metric">
+          <span class="case-metric-val">$57m+</span>
+          <span class="case-metric-desc">Sale Price</span>
         </div>
       </div>
       <div class="case-record fu d3">
@@ -1233,7 +1240,7 @@ nav.scrolled .nav-logo-img {
       </div>
       </div>
       <div class="case-buyer fu d4">
-        <strong>Acquired by Minor Group Thailand</strong> — facilitated by ABS through full branding, operator alignment and structured exit strategy.
+        <strong>Acquired by Minor Group Thailand</strong> —  Steve worked with the developer from the concept stage to the day it settled.
       </div>
     </div>
   </div>
@@ -1385,9 +1392,18 @@ c
           </div>
           <div>
             <span class="cd-label">Based In</span>
-            <span class="cd-val">Australia</span>
+            <div style="display:flex; flex-direction:column; gap:0.8rem; margin-top:0.4rem;">
+              <div style="display:flex; align-items:flex-start; gap:0.6rem;">
+                <span style="font-size:1rem;">📍</span>
+                 <span class="cd-val">17 Sternlight Street<br>Noosaville QLD 4566, Australia</span>
+             </div>
+            <div style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <span style="font-size:1rem;">📍</span>
+         <span class="cd-val">Jl. Pantai Bingin, Pecatu<br>Kabupaten Badung, Bali 80361, Indonesia</span>
+    </div>
+  </div>
+</div>
           </div>
-        </div>
       </div>
       <div class="fu d2">
         <form class="cform" id="cform">
